@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConectaPerú Telecom | Cajamarca</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="#inicio" class="logo">Conecta<span>Perú</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#requisitos">Cómo Funciona</a></li>
+                    <li><a href="#tramites">Portabilidad / Trámites</a></li>
+                    <li><a href="#ubicacion">Sede Cajamarca</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero-section">
+            <div class="container hero-content">
+                <span class="hero-tag">Cajamarca y la Región Norte</span>
+                <h1>Cámbiate a ConectaPerú manteniendo tu mismo número</h1>
+                <p>Portabilidad rápida y sin interrupciones desde Movistar, Claro o Entel. ¡Disfruta de la mejor cobertura 5G y Fibra Óptica!</p>
+                <a href="#tramites" class="btn btn-hero">Iniciar Trámite de Portabilidad</a>
+            </div>
+        </section>
+
+        <section id="servicios" class="container section-padding">
+            <h2 class="section-title">Servicios Destacados</h2>
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Planes Móviles Postpago</h3>
+                    <p>Gigas ilimitados en redes sociales y alta velocidad con cobertura total en Cajamarca.</p>
+                    <span class="price-tag">Desde S/ 29.90 / mes</span>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Fibra Óptica Hogar</h3>
+                    <p>Conexión 100% simétrica de hasta 1000 Mbps ideal para streaming y trabajo remoto.</p>
+                    <span class="price-tag">Desde S/ 69.90 / mes</span>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">🛠️</div>
+                    <h3>Soporte Técnico / Incidencias</h3>
+                    <p>Atención inmediata las 24 horas para revisión de línea, reposición de chip y diagnóstico.</p>
+                    <span class="price-tag">Atención Gratuita</span>
+                </article>
+            </div>
+        </section>
+
+        <section id="requisitos" class="bg-light section-padding">
+            <div class="container">
+                <h2 class="section-title">¿Cómo realizar tu Portabilidad Móvil?</h2>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <span class="step-number">1</span>
+                        <h4>Selecciona tu Operador</h4>
+                        <p>Elige tu operador actual (Movistar, Claro o Entel) en nuestro formulario digital.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">2</span>
+                        <h4>Ingresa tus Datos</h4>
+                        <p>Ingresa tu DNI y número móvil. No perderás tu saldo actual ni tu número.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">3</span>
+                        <h4>Recibe tu nuevo Chip</h4>
+                        <p>Delivery gratuito en la ciudad de Cajamarca o recógelo en nuestra sede céntrica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tramites" class="container section-padding">
+            <h2 class="section-title">Formulario de Solicitud y Portabilidad</h2>
+            <p class="section-subtitle">Selecciona el trámite a realizar. Al elegir Portabilidad, se desplegarán los operadores de origen.</p>
+            
+            <div class="form-wrapper">
+                <form id="form-conectaperu" class="custom-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="dni">DNI / Documento de Identidad:</label>
+                            <input type="text" id="dni" name="dni" maxlength="9" placeholder="Ej. 74839201" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono / Celular de Contacto:</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="Ej. 976543210" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo_tramite">Tipo de Trámite / Solicitud:</label>
+                        <select id="tipo_tramite" name="tipo_tramite" required onchange="toggleSubopciones()">
+                            <option value="">-- Seleccione una opción --</option>
+                            <option value="Portabilidad Línea Móvil">Portabilidad Línea Móvil</option>
+                            <option value="Alta de Fibra Óptica Hogar">Alta de Fibra Óptica Hogar</option>
+                            <option value="Soporte Técnico / Incidencia">Soporte Técnico / Incidencia</option>
+                            <option value="Atención al Cliente / Consultas">Atención al Cliente / Consultas</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group sub-option" id="grupo_operador" style="display: none;">
+                        <label for="operador_origen">📱 Operador de Origen del cual migras:</label>
+                        <select id="operador_origen" name="operador_origen">
+                            <option value="">-- Selecciona tu operador actual --</option>
+                            <option value="Movistar">Movistar Perú</option>
+                            <option value="Claro">Claro Perú</option>
+                            <option value="Entel">Entel Perú</option>
+                            <option value="Bitel">Bitel Perú</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group sub-option" id="grupo_plan" style="display: none;">
+                        <label for="plan_destino">📦 Selecciona el Plan ConectaPerú a contratar:</label>
+                        <select id="plan_destino" name="plan_destino">
+                            <option value="Plan Conecta Básica S/ 29.90">Plan Conecta Básica - S/ 29.90/mes</option>
+                            <option value="Plan Conecta Ilimitado S/ 39.90">Plan Conecta Ilimitado - S/ 39.90/mes</option>
+                            <option value="Plan Conecta VIP 5G S/ 59.90">Plan Conecta VIP 5G - S/ 59.90/mes</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Comentarios o Dirección de Entrega (Cajamarca):</label>
+                        <textarea id="mensaje" name="mensaje" rows="3" placeholder="Detalla tu consulta o dirección para el envío del nuevo Chip..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-submit">Enviar Solicitud en Línea</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="ubicacion" class="bg-light section-padding">
+            <div class="container">
+                <h2 class="section-title">Atención Presencial en Cajamarca</h2>
+                <div class="location-grid">
+                    <div class="location-card">
+                        <h3>Sede Principal Cajamarca</h3>
+                        <p>📍 <strong>Dirección:</strong> Jr. Dos de Mayo N° 450, Centro Histórico, Cajamarca.</p>
+                        <p>🕒 <strong>Horario de Atención:</strong> Lunes a Sábado: 8:00 a.m. - 7:00 p.m.</p>
+                        <p>📞 <strong>Central Telefónica:</strong> (076) 362-900</p>
+                        <p>💬 <strong>WhatsApp Ventas:</strong> +51 913762325</p>
+                    </div>
+                    <div class="map-box">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.983637151125!2d-78.5197893!3d-7.1583333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91b25af18625e1df%3A0xb304b5f8502d689b!2sPlaza%20de%20Armas%20de%20Cajamarca!5e0!3m2!1ses!2spe!4v1700000000000!5m2!1ses!2spe" 
+        width="100%" 
+        height="100%" 
+        style="border:0; min-height: 280px; border-radius: 8px;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2026 ConectaPerú Telecom - Cajamarca. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function desplegarOpcionesProceso() {
+    var tramiteSeleccionado = document.getElementById('tipo_tramite').value;
+    var bloqueOperador = document.getElementById('grupo_operador');
+    var bloquePlan = document.getElementById('grupo_plan');
+    var campoOperador = document.getElementById('operador_origen');
+
+    if (tramiteSeleccionado === 'Portabilidad Línea Móvil') {
+        bloqueOperador.style.display = 'block';
+        bloquePlan.style.display = 'block';
+        campoOperador.required = true;
+    } else if (tramiteSeleccionado === 'Alta de Fibra Óptica Hogar') {
+        bloqueOperador.style.display = 'none';
+        bloquePlan.style.display = 'block';
+        campoOperador.required = false;
+        campoOperador.value = '';
+    } else {
+        bloqueOperador.style.display = 'none';
+        bloquePlan.style.display = 'none';
+        campoOperador.required = false;
+        campoOperador.value = '';
+    }
+}
+
+document.getElementById('form-conectaperu').addEventListener('submit', function(evento) {
+    evento.preventDefault();
+
+    var numeroDestino = "51913762325"; 
+
+    var nombreCliente = document.getElementById('nombre').value;
+    var dniCliente = document.getElementById('dni').value;
+    var telefonoCliente = document.getElementById('telefono').value;
+    var tramiteCliente = document.getElementById('tipo_tramite').value;
+    
+    var elementoOperador = document.getElementById('operador_origen');
+    var operadorOrigen = elementoOperador ? elementoOperador.value : '';
+    
+    var elementoPlan = document.getElementById('plan_destino');
+    var planElegido = elementoPlan ? elementoPlan.value : '';
+    
+    var mensajeCliente = document.getElementById('mensaje').value;
+
+    var mensajeFinal = "*NUEVA SOLICITUD EN LÍNEA - CONECTAPERÚ*\n\n";
+    mensajeFinal = mensajeFinal + "👤 *Cliente:* " + nombreCliente + "\n";
+    mensajeFinal = mensajeFinal + "🪪 *DNI:* " + dniCliente + "\n";
+    mensajeFinal = mensajeFinal + "📞 *Teléfono:* " + telefonoCliente + "\n";
+    mensajeFinal = mensajeFinal + "📋 *Trámite:* " + tramiteCliente + "\n";
+
+    if (tramiteCliente === 'Portabilidad Línea Móvil' && operadorOrigen) {
+        mensajeFinal = mensajeFinal + "📱 *Operador Origen:* " + operadorOrigen + "\n";
+    }
+
+    if (planElegido && (tramiteCliente === 'Portabilidad Línea Móvil' || tramiteCliente === 'Alta de Fibra Óptica Hogar')) {
+        mensajeFinal = mensajeFinal + "📦 *Plan Deseado:* " + planElegido + "\n";
+    }
+
+    if (mensajeCliente) {
+        mensajeFinal = mensajeFinal + "💬 *Comentarios / Dirección:* " + mensajeCliente + "\n";
+    }
+
+    var enlaceWhatsApp = "https://wa.me/" + numeroDestino + "?text=" + encodeURIComponent(mensajeFinal);
+
+    window.open(enlaceWhatsApp, '_blank');
+});
+    </script>
+    <select id="tipo_tramite" name="tipo_tramite" required onchange="desplegarOpcionesProceso()"></select>
+</body>
+</html>
